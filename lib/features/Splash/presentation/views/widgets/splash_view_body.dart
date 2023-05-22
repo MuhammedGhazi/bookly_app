@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_bookly/core/utils/assets.dart';
-import 'package:my_bookly/features/home/presentation/views/home.dart';
-
+import '../../../../home/presentation/views/home_view.dart';
 import 'sliding_text.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -56,7 +55,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     Future.delayed(
       const Duration(milliseconds: 2000),
       () {
-        Get.to(() => const HomePage(), transition: Transition.fade);
+        Get.to(() => const HomeView(), transition: Transition.fade);
       },
     );
   }
