@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_bookly/constants.dart';
 import 'package:my_bookly/core/utils/assets.dart';
 import '../../../../home/presentation/views/home_view.dart';
 import 'sliding_text.dart';
@@ -53,7 +54,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void navigateToHome() {
     Future.delayed(
-      const Duration(milliseconds: 2000),
+      KTranstionDuration,
       () {
         Get.to(() => const HomeView(), transition: Transition.fade);
       },
