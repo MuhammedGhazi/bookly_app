@@ -1,10 +1,11 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:my_bookly/core/utils/assets.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import 'package:my_bookly/core/utils/styles.dart';
 
 import 'custom_app_bar.dart';
-import 'custom_list_view_item.dart';
+
 import 'featured_books_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
