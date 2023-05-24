@@ -1,6 +1,8 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:my_bookly/constants.dart';
+
+import 'package:my_bookly/core/utils/assets.dart';
 
 import 'package:my_bookly/core/utils/styles.dart';
 
@@ -17,15 +19,57 @@ class HomeViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
+        children: [
           CustomAppBar(),
           FeaturedBooksListView(),
-          Text(
-            "Best Seller",
-            style: Styles.titleMedium,
-          ),
+          Text("Best Seller", style: Styles.textStyle18),
+          BestSellerListViewItem()
         ],
       ),
+    );
+  }
+}
+
+class BestSellerListViewItem extends StatelessWidget {
+  const BestSellerListViewItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height * 0.2,
+              width: MediaQuery.of(context).size.height * 0.2 * 0.6,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(AssetsData.testImage), fit: BoxFit.fill),
+              ),
+            ),
+            const SizedBox(
+              width: 18,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text("Harry Potter and the Goblet of Fire"),
+                const Text("J.K.Rowling"),
+                Row(
+                  children: const [
+                    Text("1.99 € "),
+                    Icon(Icons.star),
+                    Text("4.8"),
+                    Text(
+                      "(2390)",
+                    ),
+                  ],
+                )
+              ],
+            )
+          ],
+        )
+      ],
     );
   }
 }
