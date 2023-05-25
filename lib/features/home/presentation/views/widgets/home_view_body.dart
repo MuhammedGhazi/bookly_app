@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:my_bookly/core/utils/styles.dart';
-import 'package:my_bookly/features/home/presentation/views/widgets/Home_view_body.dart';
+import 'package:my_bookly/features/home/presentation/views/widgets/best_seller_list_view_item.dart';
 
 import 'custom_app_bar.dart';
 
