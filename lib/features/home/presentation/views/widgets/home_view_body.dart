@@ -48,12 +48,20 @@ class BestSellerListViewItem extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              width: 18,
+              width: 30,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("Harry Potter and the Goblet of Fire"),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: const Text(
+                    "Harry Potter and  the Goblet of Fire",
+                    style: Styles.textStyle20,
+                    overflow: TextOverflow.clip,
+                    maxLines: 2,
+                  ),
+                ),
                 const Text("J.K.Rowling"),
                 Row(
                   children: const [
