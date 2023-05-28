@@ -5,30 +5,36 @@ import 'package:my_bookly/core/utils/styles.dart';
 class BookRatng extends StatelessWidget {
   const BookRatng({
     super.key,
+    this.mainAxisAlignment = MainAxisAlignment.spaceEvenly,
   });
+  final MainAxisAlignment mainAxisAlignment; // = MainAxisAlignment.start;
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        const Icon(
+      mainAxisAlignment: mainAxisAlignment,
+      children: const [
+        Icon(
           FontAwesomeIcons.solidStar,
+          size: 14,
           color: Color(0xffFFDD4F),
         ),
-        const SizedBox(
+        SizedBox(
           width: 6.3,
         ),
-        const Text(
+        Text(
           "4.8",
           style: Styles.textStyle16,
         ),
-        const SizedBox(
+        SizedBox(
           width: 4.3,
         ),
-        Text(
-          "(2390)",
-          style: Styles.textStyle14.copyWith(color: Color(0xff70707070)),
+        Opacity(
+          opacity: .50,
+          child: Text(
+            "(2390)",
+            style: Styles.textStyle14,
+          ),
         ),
       ],
     );
