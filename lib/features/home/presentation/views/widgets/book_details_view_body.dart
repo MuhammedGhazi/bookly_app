@@ -5,6 +5,7 @@ import 'package:my_bookly/features/home/presentation/views/widgets/custom_book_i
 
 import 'books_action.dart';
 import 'custom_book_details_app_bar.dart';
+import 'similar_books_list_view.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -20,9 +21,9 @@ class BookDetailsViewBody extends StatelessWidget {
             const CustomBookDetailsAppBar(),
             Padding(
               padding: EdgeInsets.only(
-                left: MediaQuery.of(context).size.width * .19,
-                right: MediaQuery.of(context).size.width * .10,
-                top: 20,
+                left: MediaQuery.of(context).size.width * .21,
+                right: MediaQuery.of(context).size.width * .11,
+                top: 10,
               ),
               child: const CustomBookItem(),
             ),
@@ -48,12 +49,27 @@ class BookDetailsViewBody extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
             ),
             const SizedBox(
-              height: 37,
+              height: 30,
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8),
               child: BooksAction(),
             ),
+            const SizedBox(
+              height: 30,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "you can also like",
+                style: Styles.textStyle16
+                    .copyWith(fontWeight: FontWeight.w600, color: Colors.white),
+              ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            const SimilarBooksListView()
           ],
         ),
       )),
