@@ -31,10 +31,10 @@ class ServerFailure extends Failure {
         if (dioError.message.contains("SocketException")) {
           return ServerFailure("No internet connected");
         }
-        return ServerFailure("UnExpected Error,Please try leater!");
+        return ServerFailure("UnExcpected Error,Please try leater!");
 
       default:
-        return ServerFailure("UnExpected Error,Please try leater!");
+        return ServerFailure("UnExcpected Error,Please try leater!");
     }
   }
   factory ServerFailure.fromResponse(int statusCode, dynamic response) {
